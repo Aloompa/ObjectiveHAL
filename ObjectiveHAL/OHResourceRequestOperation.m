@@ -9,7 +9,7 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AFNetworking/AFNetworking.h>
-#import <AFNetworking/AFJSONRequestOperation.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
 #import "OHResourceRequestOperation.h"
 
@@ -33,14 +33,9 @@
 
 #pragma mark - AFHTTPRequestOperation
 
-+ (NSSet *)acceptableContentTypes {
-    NSSet *contentTypes = [NSSet setWithObjects:@"application/hal+json", nil];
-    return [contentTypes setByAddingObjectsFromSet:[super acceptableContentTypes]];
-}
-
 + (BOOL)canProcessRequest:(NSURLRequest *)request {
     
-    return [[[request URL] pathExtension] isEqualToString:@"json"] || [super canProcessRequest:request];
+    return [[[request URL] pathExtension] isEqualToString:@"json"];
 }
 
 @end

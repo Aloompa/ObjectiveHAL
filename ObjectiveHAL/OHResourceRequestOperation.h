@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 ObjectiveHAL. All rights reserved.
 //
 
-#import "AFJSONRequestOperation.h"
+#import "AFHTTPRequestOperation.h"
 #import "OHResource.h"
 
 /**
@@ -14,7 +14,7 @@
  requests for the content type 'application/hal+json' in addition to
  the default 'application/json' conten type.
  */
-@interface OHResourceRequestOperation : AFJSONRequestOperation
+@interface OHResourceRequestOperation : AFHTTPRequestOperation
 
 /**
  Initializes and returns a newly allocated operation object with a url connection configured with the specified url request.

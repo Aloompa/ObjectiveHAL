@@ -6,5 +6,5 @@ target :ObjectiveHALTests, :exclusive => true do
 end
 
 pod 'CSURITemplate'
-pod 'AFNetworking', '~> 1.3'
+pod 'AFNetworking', '~> 2.4.1'
 
