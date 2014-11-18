@@ -326,8 +326,8 @@
 
 - (NSString *)debugDescription
 {
-    NSString *dd = [NSString stringWithFormat:@"<%@: %p>{ links=%d, curies=%d, embedded=%d }",
-                    NSStringFromClass([self class]), self, self.links.count, self.curies.count, self.embedded.count];
+    NSString *dd = [NSString stringWithFormat:@"<%@: %p>{ links=%lu, curies=%lu, embedded=%lu }",
+                    NSStringFromClass([self class]), self, (unsigned long)self.links.count, (unsigned long)self.curies.count, (unsigned long)self.embedded.count];
     return dd;
 }
 

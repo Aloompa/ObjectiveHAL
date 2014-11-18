@@ -76,6 +76,6 @@ typedef void (^OHCompletionHandler)();
  @param completion A `OHCompletionHandler` block, called once all traversals
  for this operation have been completed.
  */
-+ (OHLinkTraversalOperation *)traversePath:(NSString *)path withClient:(AFHTTPRequestOperationManager *)withRequestManager  traversalHandler:(OHLinkTraversalHandler)handler completion:(OHCompletionHandler)completion;
++ (OHLinkTraversalOperation *)traversePath:(NSString *)path withRequestManager:(AFHTTPRequestOperationManager *)withRequestManager  traversalHandler:(OHLinkTraversalHandler)handler completion:(OHCompletionHandler)completion;
 
 @end
